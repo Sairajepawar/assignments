@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 // You have been given a list of items you shopped from the grocery store
 // You need to calculate the total amount of money you spent
 
@@ -12,8 +12,28 @@ export const Assignment3 = () => {
     ]);
 
     // Your code starts here
-    const totalValue = 0;
+    const totalValue = useMemo(() => {
+        let sum = 0;
+        items.forEach((ele) => {
+            sum = sum + ele.value;
+        })
+        return sum;
+    }, [items]);
     // Your code ends here
+    const nameref = useRef();
+    const valueref = useRef();
+    const handleClick = () => {
+        const name = nameref.current.value;
+        const value = parseInt(valueref.current.value);
+        const data = {
+            name: name,
+            value: value
+        }
+        console.log(data);
+        setItems([...items, data]);
+        nameref.current.value = " ";
+        valueref.current.value = " ";
+    }
     return (
         <div>
             <ul>
@@ -22,6 +42,9 @@ export const Assignment3 = () => {
                 ))}
             </ul>
             <p>Total Value: {totalValue}</p>
+            <input placeholder='Enter the name of item' ref={nameref} ></input>
+            <input placeholder='Enter the value of item' ref={valueref}></input>
+            <button onClick={handleClick}>Submit</button>
         </div>
     );
 };
