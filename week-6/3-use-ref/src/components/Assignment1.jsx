@@ -7,7 +7,7 @@ export function Assignment1() {
     const ref = useRef(0);
 
     useEffect(() => {
-
+        ref.current.focus();
     }, []);
 
     const handleButtonClick = () => {
