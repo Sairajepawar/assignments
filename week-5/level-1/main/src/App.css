@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.main-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.links-section{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.smooth-border {
+    border: 2px solid rgba(0, 0, 0, 0.5); /* Set border color with 50% opacity */
+    border-radius: 10px; /* Set border radius */
+}
+
+
+.skills-title{
+    font-size: 1.2rem;
+}
