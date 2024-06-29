@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    gap: 15px;
+    border: 2px solid black;
+    padding: 50px;
+}
+.profile-image{
+    border-radius: 50%;
+    height: 25vh;
+}
+.personal-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.age{
+    color: #8e8a8a;
+}
+h2,h4,h1,p{
+    margin:0;
+}
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    gap: 10px;
+    border: solid 1px #8e8a8a ;
+}
+.stats_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.stats-attribute{
+    color: #8e8a8a;
+}
