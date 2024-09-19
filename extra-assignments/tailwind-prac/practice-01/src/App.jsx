@@ -1,11 +1,10 @@
 import './App.css'
+import RevenueCard from "./components/RevenueCard.jsx";
 function App() {
     return (
         <>
-            <div className='grid grid-cols-3'>
-                <div className=' col-span-3 md:col-span-1 bg-amber-300'>first</div>
-                <div className=' col-span-3 md:col-span-1 bg-red-500'>second</div>
-                <div className=' col-span-3 md:col-span-1 bg-blue-600'>thrid</div>
+            <div className='grid grid-cols-4'>
+                <RevenueCard  className='col-span-4 lg:col-span-1 sm:col-span-2' title="Amount Pending" showWarning={false} Amount={92312.2} OrderCount={13}/>
             </div>
         </>
     )
